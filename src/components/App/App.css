@@ -6,3 +6,16 @@ body{
     color: var(--primary-color);
     font-family: "Helvetica";
 }
+.grid-item{
+    min-width: 100px;
+    @media (width < 825px){
+        width: 100px;
+    }
+    @media (width >= 825px) and (width < 1000px){
+        width: 110px;
+    }
+    @media(width >= 1000px){
+        width: 150px
+    }
+ 
+}
