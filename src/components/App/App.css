@@ -5,6 +5,11 @@
 body{
     color: var(--primary-color);
     font-family: "Helvetica";
+    
+}
+#app{
+    display: flex;
+    justify-content: center;
 }
 .grid-item{
     min-width: 100px;
@@ -18,4 +23,31 @@ body{
         width: 150px
     }
  
+}
+
+button, a.button, div.button {
+    padding: .5em;
+    background: lightslategray;
+    border-radius: 2px;
+    border: 2px solid darkslategray;
+    color: black;
+    font-size: 15px;
+    font-weight: 700;
+    min-width: 75px;
+    margin: .5em;
+    cursor: pointer;
+
+    &:hover{
+        border: 2px solid dodgerblue;
+        opacity: .95;
+    }
+    &.secondary-button{
+        background: darkslategray;
+        border: 2px solid lightslategrey;
+    }
+    &.secondary-button:hover{
+        opacity: .90;
+        border: 2px solid dodgerblue;
+    }
+  
 }

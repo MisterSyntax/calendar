@@ -10,12 +10,13 @@ import Calendar from '../../components/Calendar/'
 import { connect } from 'react-redux'
 
 //import whatever action you need to update your state
-import { setPage, setToday } from '../../actions'
+import { setPage, setToday, addNote } from '../../actions'
 
 const mapStateToProps = (state, props) => (
     {
         todayDate: state.todayDate,
-        currentPage: state.currentPage
+        currentPage: state.currentPage,
+        allNotes: state.notes
     }
 )
 
@@ -29,6 +30,11 @@ const mapDispatchToProps = dispatch => {
         setToday(){
             dispatch(
                 setPage()
+            )
+        },
+        addNote(note){
+            dispatch(
+                addNote(note)
             )
         }
     }

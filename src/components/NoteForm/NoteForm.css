@@ -1,0 +1,9 @@
+.add-note-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    & textarea{
+        width: 90%;
+    }
+}

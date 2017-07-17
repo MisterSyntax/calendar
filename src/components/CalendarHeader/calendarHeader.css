@@ -1,7 +1,3 @@
 .calendar-header-days{
     display: flex;
 }
-.calendar-header-item{
-    cursor: pointer;
-    border: 1px solid black;
-}

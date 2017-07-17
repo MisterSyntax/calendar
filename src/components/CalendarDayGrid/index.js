@@ -6,9 +6,8 @@ import CalendarDay from '../CalendarDay'
 
 
 const CalendarDayGrid = (props) => {
-    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'Novemeber', 'December']
 
-    const currentMonth = props.currentPage.match(/^(\d+)/)[1] - 1
+    const currentMonth = props.currentPage.match(/^(\d+)/)[1]
     const currentYear = props.currentPage.match(/-(\d+)$/)[1]
     const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate()
     const firstWeekDay = new Date(currentYear, currentMonth).getDay()
@@ -23,18 +22,19 @@ const CalendarDayGrid = (props) => {
         }
         calendarEntries[Math.floor((firstWeekDay + j) / 7)].push(j + 1)
     }
-    console.log(calendarEntries)
 
     return (
         <div id="calendar-day-grid">
             {calendarEntries.map((curr, ind) => {
-                return(
-                <div className="calendar-row" key={ind}>
-                    {curr.map((day, ind2) => {
-                        return(<CalendarDay key={ind + "" + ind2} date={day} />)
-                    })
-                    }
-                </div>)
+                return (
+                    <div className="calendar-row" key={ind}>
+                        {curr.map((day, ind2) => {
+                            return (<CalendarDay key={ind + "" + ind2} day={day} calendarPage={currentMonth + '-' + currentYear} addNote={props.addNote} notes={props.allNotes.filter((note) =>
+                                note.dayOfMonth == day
+                            )} />)
+                        })
+                        }
+                    </div>)
             })
             }
         </div>)

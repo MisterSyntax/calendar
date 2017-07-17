@@ -4,7 +4,7 @@ import './calendarHeader.css'
 const CalendarHeader = (props) => {
     return (
         <div id="calendar-header">
-            Calendar Month : {props.currentPage}
+            Welcome to the Calendar
             <div className="calendar-header-days">
                 <div className="calendar-header-item grid-item">
                     Sunday
