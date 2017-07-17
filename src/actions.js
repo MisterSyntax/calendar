@@ -8,14 +8,35 @@
  */
 import C from "./constants"
 
-export const enableContent = () => {
+export const setPage = (newPage) => {
     return {
-        type: C.ENABLE
+        type: C.SET_PAGE,
+        payload: newPage
     }
 }
 
-export const disableContent = () => {
+export const setToday = () => {
+    let today = new Date
     return {
-        type: C.DISABLE
+        type: C.DISABLE,
+        payload: today.getMonth()+1 + "-" + today.getDate() + '-' + today.getFullYear()
     }
+}
+
+export const addNote = ({dayOfMonth, calendarPage, note}) => {
+    const timeStamp = new Date
+    let id = timeStamp.getTime()
+    return {
+        type: C.ADD_NOTE,
+        payload: {
+            dayOfMonth,
+            calendarPage,
+            note,
+            id
+        }
+    }
+} 
+
+export const removeNote = (noteId) => {
+
 }

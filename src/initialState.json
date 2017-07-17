@@ -1,3 +1,12 @@
 {
-    "enable" : false
+    "todayDate": "7-17-2017",
+    "currentPage": "7-2017",
+    "notes": [
+        {
+            "dayOfMonth":"1",
+            "calendarPage":"7-2017",
+            "note":"I need to get a new pair of shoes",
+            "id": "10001"
+        }
+    ]
 }

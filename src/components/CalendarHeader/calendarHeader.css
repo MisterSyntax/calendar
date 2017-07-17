@@ -1,0 +1,8 @@
+.calendar-header-days{
+    display: flex;
+}
+.calendar-header-item{
+    width: 150px;
+    cursor: pointer;
+    border: 1px solid black;
+}
