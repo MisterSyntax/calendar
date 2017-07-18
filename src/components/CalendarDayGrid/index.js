@@ -23,7 +23,6 @@ const CalendarDayGrid = (props) => {
         //add actual days
         for (let j = 0; j < daysInMonth; j++) {
             if (j % 7 === 0) {
-                console.log('push')
                 calendarEntries.push([])
             }
             calendarEntries[Math.floor((firstWeekDay + j) / 7)].push(j + 1)

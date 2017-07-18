@@ -20,7 +20,7 @@ body{
         width: 110px;
     }
     @media(width >= 1000px){
-        width: 150px
+        width: 150px;
     }
  
 }
