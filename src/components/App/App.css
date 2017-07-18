@@ -5,6 +5,7 @@
 body{
     color: var(--primary-color);
     font-family: "Helvetica";
+    background-color: lightskyblue;
     
 }
 #app{

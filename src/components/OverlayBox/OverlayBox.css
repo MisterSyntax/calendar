@@ -37,6 +37,8 @@
     position: relative;
     transform: translateY(50%);
     margin: auto;
+    display: flex;
+    justify-content: center;
 
     /**Style it**/
     font-weight: 700;
