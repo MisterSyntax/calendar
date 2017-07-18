@@ -1,3 +1,13 @@
+@import url('../../cssGlobals/colors.css');
 .calendar-header-days{
     display: flex;
+    border: 1px solid black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
+
+.calendar-title{
+    text-align: center;
+    font-size: 60px;
+}
+

@@ -3,9 +3,8 @@
 
 /**use global variables like below**/
 body{
-    color: var(--primary-color);
+    color: black;
     font-family: "Helvetica";
-    background-color: lightskyblue;
     
 }
 #app{
@@ -28,27 +27,29 @@ body{
 
 button, a.button, div.button {
     padding: .5em;
-    background: lightslategray;
+    background: var(--primary-light);
     border-radius: 2px;
-    border: 2px solid darkslategray;
+    border: 2px solid var(--primary-dark);
     color: black;
     font-size: 15px;
     font-weight: 700;
     min-width: 75px;
     margin: .5em;
     cursor: pointer;
+    text-align: center;
 
     &:hover{
-        border: 2px solid dodgerblue;
+        background: var(--primary-color);
+        border: 2px solid var(--primary-color);
         opacity: .95;
     }
     &.secondary-button{
-        background: darkslategray;
-        border: 2px solid lightslategrey;
+        background: var(--secondary-color);
+        border: 2px solid var(--secondary-dark);
     }
     &.secondary-button:hover{
         opacity: .90;
-        border: 2px solid dodgerblue;
+        border: 2px solid var(--secondary-light);
     }
   
 }

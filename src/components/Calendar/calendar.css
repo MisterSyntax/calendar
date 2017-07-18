@@ -1,0 +1,8 @@
+@import url('../../cssGlobals/colors.css');
+
+
+#calendar-container{
+    padding: .3em;
+    background-color: var(--secondary-light);
+    border-radius: 5px;
+}

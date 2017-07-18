@@ -16,6 +16,7 @@ export default class NoteForm extends React.Component {
         })
     }
     handleSubmission() {
+
         this.props.addNote({
             dayOfMonth: this.props.dayOfMonth,
             calendarPage: this.props.calendarPage,
@@ -23,10 +24,9 @@ export default class NoteForm extends React.Component {
         })
         this.setState({
             note:""
-        })
-        console.log(this.state.note)
-        
+        })        
         this.props.closeOverlay()
+        
     }
     render() {
         return (

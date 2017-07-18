@@ -3,6 +3,8 @@ import CalendarHeader from '../CalendarHeader/'
 import CalendarFooter from '../CalendarFooter'
 import CalendarDayGrid from '../CalendarDayGrid/'
 
+import './calendar.css'
+
 
 export default class Calendar extends React.Component {
     constructor(props) {
@@ -11,10 +13,20 @@ export default class Calendar extends React.Component {
     render() {
         return (
             <div id="calendar-container" >
-                <CalendarHeader />
+                <CalendarHeader currentPage={this.props.currentPage}/>
+                
+                <CalendarDayGrid 
+                    currentPage={this.props.currentPage} 
+                    addNote={this.props.addNote} 
+                    allNotes={this.props.allNotes.filter((note) => 
+                        note.calendarPage === this.props.currentPage)} 
+                />
 
-                <CalendarDayGrid currentPage={this.props.currentPage} addNote={this.props.addNote} allNotes={this.props.allNotes.filter((note) => note.calendarPage === this.props.currentPage)} />
-                <CalendarFooter currentPage={this.props.currentPage} setPage={this.props.setPage} />
+                <CalendarFooter 
+                    currentPage={this.props.currentPage} 
+                    setPage={this.props.setPage} 
+                />
+                
             </div>
         )
 

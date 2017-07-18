@@ -1,11 +1,11 @@
 import React from 'react'
-import './calendarHeader.css'
+import './calendarFooter.css'
 
-const CalendarHeader = (props) => {
-    console.log(props.currentPage)
+const CalendFooter = (props) => {
+    
     let month = props.currentPage.match(/^(\d+)/)[1]
     let year = props.currentPage.match(/-(\d+)$/)[1]
-    var monthName = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    let monthName = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
     
     function nextMonth(month, year){
 
@@ -28,11 +28,10 @@ const CalendarHeader = (props) => {
         <div id="calendar-header">
             <div id="month-control-bar">
             <div className="button" onClick={()=>props.setPage(lastMonth(month,year))}>Prev</div>
-            <div> {monthName[month]} {year} </div>
             <div className="button" onClick={()=>props.setPage(nextMonth(month,year))}>Next</div>
             </div>
         </div>
     )
 }
 
-export default CalendarHeader
+export default CalendFooter

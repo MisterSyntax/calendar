@@ -1,5 +1,16 @@
 /**Can define global colors to import into components**/
 :root {
   /**also used for flyouts**/
-  --primary-color: black;
+  --primary-color: #448F9D;
+  --primary-light: #AEBBE4;
+  --primary-dark: #223882;
+
+  --secondary-color: #448F9D;
+  --secondary-light: #A5D6DF;
+  --secondary-dark: #166776;
+
+  --third-color: #6F55AE;
+  --third-light: #BEAEE5;
+  --third-dark: #3E2283;
+
 }
